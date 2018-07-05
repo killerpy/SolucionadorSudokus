@@ -11,15 +11,6 @@ public class Sudoku {
 	private int[][] sudoku = new int[DIM][DIM];
 	
 	private DataInputStream lec = null;
-
-	//Constructor (aquí hago las llamadas a los métodos)
-	
-	public Sudoku() {
-		cargar(sudoku);
-		resolver(sudoku,0,0);
-		mostrar(sudoku);
-		imprimirIteraciones();
-	}
 	
 	//Getter y setter
 	
