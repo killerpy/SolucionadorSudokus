@@ -5,11 +5,12 @@ public class Principal {
 
 	public Principal() {
 		
-		Sudoku prueba = new Sudoku();
-		cargar(sudoku);
-		resolver(sudoku,0,0);
-		mostrar(sudoku);
-		imprimirIteraciones();
+		Sudoku sudokuPrueba = new Sudoku();
+		int[][] matriz = sudokuPrueba.getSudoku();
+		sudokuPrueba.cargar(matriz);
+		sudokuPrueba.resolver(matriz,0,0);
+		sudokuPrueba.mostrar(matriz);
+		sudokuPrueba.imprimirIteraciones();
 	
 	}
 	
