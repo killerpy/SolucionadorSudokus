@@ -58,7 +58,7 @@ public class Sudoku {
 			
 			for(int filas = 0; filas < DIM; filas++) {
 				cadena = lec.readLine();
-				//System.out.println(cadena); Este es un comprobador para saber si pilla las lineas 
+				//System.out.println(cadena); //Este es un comprobador para saber si pilla las lineas 
 				partes = cadena.split(";");
 				for(int columnas = 0; columnas < DIM; columnas++) 
 					matrix[filas][columnas] = Integer.parseInt(partes[columnas]); 
@@ -101,7 +101,6 @@ public class Sudoku {
 			else
 				return resolver(matrix, fila, col+1);
 		} else {
-
 			for(int valor = 1; valor < DIM+1; valor++) {
 				if(comprobarFila(valor, fila) && comprobarColumna(valor,col)) {
 					matrix[fila][col] = valor;
