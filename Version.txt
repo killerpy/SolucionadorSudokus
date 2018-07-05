@@ -1,1 +1,3 @@
-We're on 1.0.0 release version. Enjoy it.
+We're on 1.1.0 release version. 
+This update includes optimization on the process to solve the sudoku from 100k/200k to 2k/1600k of procedures.
+Enjoy it.
