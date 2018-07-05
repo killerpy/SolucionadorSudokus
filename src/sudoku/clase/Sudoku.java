@@ -129,10 +129,4 @@ public class Sudoku {
 		System.out.println("Se han probado: " + nSoluciones + " combinaciones");
 	}
 	
-	//Main
-	
-	public static void main(String[] args) {
-		Sudoku interfaz = new Sudoku();
-	}
-	
 }
