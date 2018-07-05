@@ -27,7 +27,8 @@ public class Sudoku {
 				variable++;
 			}
 		}
-		if(variable > 0)return false;
+		if(variable > 0) 
+			return false;
 		else return true;
 	}
 
@@ -38,7 +39,8 @@ public class Sudoku {
 				variable++;
 			}
 		}
-		if(variable > 0) return false;
+		if(variable > 0) 
+			return false;
 		else return true;
 	}
 	
@@ -47,6 +49,17 @@ public class Sudoku {
 			for(int col = 0; col < DIM; col++)
 				if(sudoku[fila][col] == 0)
 					return false;
+		return true;
+	}
+	
+	private boolean comprobarMatriz(int valor, int fila, int col) {
+		int m = fila - fila%3, n = col - col%3;
+		for(int i = 0; i < 3 && m + i < DIM; i++) {
+			for(int j = 0; j < 3 && n+j < DIM; j++) {
+				if(sudoku[m+i][n+j] == valor) 
+					return false;
+			}
+		}
 		return true;
 	}
 	
@@ -102,7 +115,7 @@ public class Sudoku {
 				return resolver(matrix, fila, col+1);
 		} else {
 			for(int valor = 1; valor < DIM+1; valor++) {
-				if(comprobarFila(valor, fila) && comprobarColumna(valor,col)) {
+				if(comprobarMatriz(valor, fila, col) && comprobarFila(valor, fila) && comprobarColumna(valor, col)) {
 					matrix[fila][col] = valor;
 
 					if(col + 1 > 8) {
