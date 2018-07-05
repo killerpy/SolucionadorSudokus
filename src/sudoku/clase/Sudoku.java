@@ -21,6 +21,12 @@ public class Sudoku {
 		imprimirIteraciones();
 	}
 	
+	//Getter y setter
+	
+		public int[][] getSudoku(){
+			return sudoku;
+		}
+	
 	//Métodos
 
 	private boolean comprobarFila(int valor, int fila) {
