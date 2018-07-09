@@ -104,21 +104,21 @@ public class Sudoku {
 	
 	public boolean resolver(int[][] matrix, int fila, int col) {
 		nSoluciones++;
-		if(estaLleno()) {
+		if(estaLleno() == true) {
 			return true;
 		}
 
 		if(matrix[fila][col] != 0) {
-			if(col + 1 > 8)
+			if(col+1 > 8)
 				return resolver(matrix, fila+1, 0);
 			else
 				return resolver(matrix, fila, col+1);
 		} else {
 			for(int valor = 1; valor < DIM+1; valor++) {
-				if(comprobarMatriz(valor, fila, col) && comprobarFila(valor, fila) && comprobarColumna(valor, col)) {
+				if(comprobarMatriz(valor, fila, col) == true && comprobarFila(valor, fila) == true && comprobarColumna(valor, col) == true) {
 					matrix[fila][col] = valor;
 
-					if(col + 1 > 8) {
+					if(col+1 > 8) {
 						if(resolver(matrix, fila+1, 0))
 							return true;
 						else continue;
