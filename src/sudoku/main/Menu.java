@@ -21,7 +21,12 @@ public class Menu {
 			sudokuPrueba.resolver(matriz,0,0);
 			System.out.println("\nEsta es su solución:\n");
 			sudokuPrueba.mostrar(matriz);
-		} 
+		} else if(variable.equalsIgnoreCase("NO")) {
+			sudokuPrueba.resolver(matriz,0,0);
+			System.out.println("FIN");
+		}
+		
+		
 		
 		if(variable.equalsIgnoreCase("SI")) {
 			do {
@@ -30,6 +35,9 @@ public class Menu {
 			} while((!variable.equalsIgnoreCase("SI")) && (!variable.equalsIgnoreCase("NO")));
 			if(variable.equalsIgnoreCase("SI")) {
 				sudokuPrueba.imprimirIteraciones();
+			}else if(variable.equalsIgnoreCase("NO")) {
+				sudokuPrueba.resolver(matriz,0,0);
+				System.out.println("FIN");
 			}
 		} 
 	}
