@@ -17,7 +17,7 @@ public class Menu {
 		String variable;
 		do {
 			System.out.println("Escribe 'SI' para resolver o 'NO' para finalizar:");
-			variable = sc.next();
+			variable = sc.nextLine();
 		} while((!variable.equalsIgnoreCase("SI")) && (!variable.equalsIgnoreCase("NO")));
 		if(variable.equalsIgnoreCase("SI")) {
 			sudokuPrueba.resolver(matriz,0,0);
@@ -31,7 +31,7 @@ public class Menu {
 		if(variable.equalsIgnoreCase("SI")) {
 			do {
 				System.out.println("Imprimir el número de combinaciones probadas? 'SI/NO':");
-				variable = sc.next();
+				variable = sc.nextLine();
 			} while((!variable.equalsIgnoreCase("SI")) && (!variable.equalsIgnoreCase("NO")));
 			if(variable.equalsIgnoreCase("SI")) {
 				sudokuPrueba.imprimirIteraciones();
