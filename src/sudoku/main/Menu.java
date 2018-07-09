@@ -6,6 +6,8 @@ public class Menu {
 
 	Scanner sc = new Scanner(System.in);	
 	
+	//Constructor (Menú)
+	
 	public Menu() {
 		Sudoku sudokuPrueba = new Sudoku();
 		int[][] matriz = sudokuPrueba.getSudoku();
@@ -40,13 +42,17 @@ public class Menu {
 		} 
 	}
 
-	public static void main(String[] args) {
-		Menu interfaz = new Menu();
-	}
+	//Métodos del menú
 	
 	public String introducirDatos() {
 		String cadena = sc.nextLine();
 		return cadena;
+	}
+	
+	//Main
+	
+	public static void main(String[] args) {
+		Menu interfaz = new Menu();
 	}
 	
 }
