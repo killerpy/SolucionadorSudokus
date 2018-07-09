@@ -26,8 +26,6 @@ public class Menu {
 			System.out.println("FIN");
 		}
 		
-		
-		
 		if(variable.equalsIgnoreCase("SI")) {
 			do {
 				System.out.println("Imprimir el número de combinaciones probadas? 'SI/NO':");
@@ -41,7 +39,7 @@ public class Menu {
 			}
 		} 
 	}
-	
+
 	public static void main(String[] args) {
 		Menu interfaz = new Menu();
 	}
