@@ -35,6 +35,7 @@ public class Menu {
 			} while((!variable.equalsIgnoreCase("SI")) && (!variable.equalsIgnoreCase("NO")));
 			if(variable.equalsIgnoreCase("SI")) {
 				sudokuPrueba.imprimirIteraciones();
+				System.out.println("FIN");
 			}else if(variable.equalsIgnoreCase("NO")) {
 				sudokuPrueba.resolver(matriz,0,0);
 				System.out.println("FIN");
